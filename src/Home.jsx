@@ -1,4 +1,5 @@
 import { useEffect, useRef, useCallback } from "react";
+import { Link } from "react-router-dom";
 
 // ─── REQUIREMENTS ────────────────────────────────────────────────────────────
 // npm install gsap
@@ -528,12 +529,13 @@ export default function Home() {
         <nav className="gg-nav" ref={navRef}>
           <div className="gg-logo">Gaurang<span>.</span>dev</div>
           <ul className="gg-nav-links">
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">SEO</a></li>
+            <Link to="/" className="gg-nav-link">Home</Link>
+            <Link to="/services" className="gg-nav-link">Services</Link>
+            <Link to="/portfolio" className="gg-nav-link">Portfolio</Link>
+            <Link to="/about" className="gg-nav-link">About</Link>
+            <Link to="/seo" className="gg-nav-link">SEO</Link>
           </ul>
-          <a href="#" className="gg-nav-cta">Get a Free Quote</a>
+          <Link to="/quote" className="gg-nav-cta">Get a Quote</Link>
         </nav>
 
         {/* HERO */}
@@ -558,8 +560,8 @@ export default function Home() {
           </p>
 
           <div className="gg-hero-actions" ref={actionsRef}>
-            <a href="#" className="gg-btn-primary">Start Your Project →</a>
-            <a href="#" className="gg-btn-secondary">View Portfolio →</a>
+            <Link to="/project" className="gg-btn-primary">Start Your Project →</Link>
+            <Link to="/portfolio" className="gg-btn-secondary">View Portfolio →</Link>
           </div>
 
           <div className="gg-stats-strip" ref={statsRef}>
@@ -643,7 +645,7 @@ export default function Home() {
           </h2>
           <div className="gg-cta-right">
             <p>Free consultation. No commitments. Just an honest conversation about your digital goals.</p>
-            <a href="#" className="gg-btn-white">Talk to Gaurang →</a>
+            <Link to="/contact" className="gg-btn-white">Talk to Gaurang →</Link>
           </div>
         </div>
 
@@ -651,9 +653,9 @@ export default function Home() {
         <footer className="gg-footer">
           <div className="gg-footer-copy">© 2025 Gaurang Goradiya — Pushti Web &amp; Software Solutions</div>
           <div className="gg-footer-links">
-            <a href="#">Privacy</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <Link to="/privacy">Privacy</Link>
+            <Link to="/portfolio">Portfolio</Link>
+            <Link to="/contact">Contact</Link>
           </div>
         </footer>
 
